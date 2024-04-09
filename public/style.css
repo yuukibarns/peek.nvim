@@ -57,15 +57,6 @@ body::-webkit-scrollbar-thumb {
 .peek-loader::after {
   animation-direction: alternate-reverse;
 }
-.peek-marker {
-  position: fixed;
-  width: 4px;
-  height: 4px;
-  top: 50%;
-  left: 5px;
-  border-radius: 50%;
-  background-color: blue;
-}
 .peek-mermaid-container {
   margin-top: 0;
   margin-bottom: 16px;
