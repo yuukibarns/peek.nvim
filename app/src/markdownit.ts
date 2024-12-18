@@ -35,8 +35,8 @@ const md = new MarkdownIt('default', {
     delimiters: ['dollars'],
     katexOptions: {
       macros: { '\\R': '\\mathbb{R}' },
-      strict: false,
-      throwOnError: false,
+      //strict: true,
+      //throwOnError: false,
     },
   });
 
