@@ -32,7 +32,7 @@ const md = new MarkdownIt('default', {
   .use(MarkdownItTaskLists, { enabled: false, label: true })
   .use(MarkdownItTexmath, {
     engine: Katex,
-    delimiters: ['dollars'],
+    delimiters: ['dollars', 'beg_end'],
     katexOptions: {
       macros: { '\\R': '\\mathbb{R}' },
       //strict: true,
