@@ -209,12 +209,12 @@ addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    const resizeObserver = new ResizeObserver(() => {
-      if (scroll) onScroll(scroll);
-    });
+    // const resizeObserver = new ResizeObserver(() => {
+    //   if (scroll) onScroll(scroll);
+    // });
 
     mutationObserver.observe(markdownBody, { childList: true });
-    resizeObserver.observe(markdownBody);
+    // resizeObserver.observe(markdownBody);
 
     return (data: { html: string; lcount: number }) => {
       source = { lcount: data.lcount };

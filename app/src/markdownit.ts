@@ -9,6 +9,9 @@ import { default as MarkdownItTaskLists } from 'https://esm.sh/markdown-it-task-
 import { default as MarkdownItTexmath } from 'https://esm.sh/markdown-it-texmath@1.0.0';
 import Katex from 'https://esm.sh/katex@0.16.9';
 import MarkdownItGitHubAlerts from 'https://esm.sh/markdown-it-github-alerts@1.0.0'
+// import MarkdownItTOC from 'https://esm.sh/markdown-it-table-of-contents@0.9.0'
+// import MarkdownItAttrs from 'https://esm.sh/markdown-it-attrs@4.3.1'
+// import MarkdownItAnchor from "https://esm.sh/markdown-it-anchor@9.2.0/deno/markdown-it-anchor.mjs";
 
 const __args = parseArgs(Deno.args);
 
@@ -30,6 +33,9 @@ const md = new MarkdownIt('default', {
   }),
 }).use(MarkdownItEmoji)
   .use(MarkdownItGitHubAlerts)
+  // .use(MarkdownItTOC)
+  // .use(MarkdownItAttrs)
+  // .use(MarkdownItAnchor)
   .use(MarkdownItFootnote)
   .use(MarkdownItTaskLists, { enabled: false, label: true })
   .use(MarkdownItTexmath, {
