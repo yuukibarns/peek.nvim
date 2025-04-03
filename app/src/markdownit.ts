@@ -8,6 +8,7 @@ import { default as MarkdownItFootnote } from 'https://esm.sh/markdown-it-footno
 import { default as MarkdownItTaskLists } from 'https://esm.sh/markdown-it-task-lists@2.1.1';
 import { default as MarkdownItTexmath } from 'https://esm.sh/markdown-it-texmath@1.0.0';
 import Katex from 'https://esm.sh/katex@0.16.9';
+import MarkdownItGitHubAlerts from 'https://esm.sh/markdown-it-github-alerts@1.0.0'
 
 const __args = parseArgs(Deno.args);
 
@@ -28,6 +29,7 @@ const md = new MarkdownIt('default', {
     return '';
   }),
 }).use(MarkdownItEmoji)
+  .use(MarkdownItGitHubAlerts)
   .use(MarkdownItFootnote)
   .use(MarkdownItTaskLists, { enabled: false, label: true })
   .use(MarkdownItTexmath, {
